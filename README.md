@@ -20,8 +20,8 @@
 
 ## Deployment
 
-- [Client](https://restaurant-reservation-eta.vercel.app/dashboard)
-- [Server](https://restaurant-backend-five.vercel.app/)
+- [Client](https://restaurant-reservation-app-five.vercel.app/dashboard)
+- [Server](https://restaurant-reservation-backend-nine.vercel.app/)
 
 ### API Paths
 
