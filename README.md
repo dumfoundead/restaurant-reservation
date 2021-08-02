@@ -1,34 +1,53 @@
-# reservations
+# Restaurant Reservation Platform
 
-[Live Link](https://reservations-frontend.vercel.app/dashboard)
+## Project Description
+
+> You have been hired as a full stack developer at _Periodic Tables_, a startup that is creating a reservation system for fine dining restaurants.
+> The software is used only by restaurant personnel when a customer calls to request a reservation.
+
+## Built With
+
+- React.js
+- Bootstrap
+- CSS
+- JSX
+- Javascript
+- Express
+- Knex
+- PostgreSQL
+- Node.js
+- CORS
+
+## Deployment
+
+- [Client](https://restaurant-reservation-eta.vercel.app/dashboard)
+- [Server](https://restaurant-backend-five.vercel.app/)
+
+### API Paths
+
+| API path                               | Function                                                                                                        |
+| -------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
+| `/reservations`                        | GET: List all reservations. POST: Create a new reservation                                                      |
+| `/reservations/?date='YYYY-MM-DD'`     | GET: All reservations by date (formated YYYY-MM-DD) ordered by reservation_time                                 |
+| `/reservations/:reservation_id`        | GET: A reservation by reservation_id, PUT: Update a reservation by reservation_id, DELETE: Delete a reservation |
+| `/reservations/:reservation_id/status` | PUT: Update a reservation status as either "booked", "seated", "finished", or "cancelled"                       |
+| `/tables`                              | GET: List all tables, POST: Create a new table                                                                  |
+| `/tables/:tables_id`                   | GET: A table by table_id, PUT: Update a table, DELETE: Delete a table                                           |
+| `/tables:table_id/seat`                | PUT: Update a table's status to "Occupied" DELETE: Update a table's status to "Free"                            |
 
 
-A project completed as part of my Thinkful curriculum. This is an application to create and manage reservations for a restaurant.
+## Installation
 
-## tools used:
+1. Fork and clone this repository.
+1. Run `cp ./back-end/.env.sample ./back-end/.env`.
+1. Update the `./back-end/.env` file with the connection URL's to your ElephantSQL database instance.
+1. Run `cp ./front-end/.env.sample ./front-end/.env`.
+1. You should not need to make changes to the `./front-end/.env` file unless you want to connect to a backend at a location other than `http://localhost:5000`.
+1. Run `npm install` to install project dependencies.
+1. Run `npm run start:dev` to start your server in development mode.
 
-- React (with functional components and hooks)
-- JavaScript
-- GitHub
-- Vercel
-- Jest
 
-## prompt:
 
-You have been hired as a full stack developer at Periodic Tables, a startup that is creating a reservation system for fine dining restaurants. The software is used only by restaurant personnel when a customer calls to request a reservation. At this point, the customers will not access the system online.
 
-## learning objectives:
 
-- Develop a front end using React Functional Components
-- Develop a RESTful API using Node, Express
-- Create a PostgreSQL database
-- Utilize an outside in full-stack workflow
-- Practice a test-driven development methodology
-- Use CI / CD through Vercel and a GitHub monorepo with automated deployment
-- Work through user stories with Agile methodologies using a Kanban based system
 
-## takeaways:
-
-- Completing the user stories of this project with a full stack workflow was immensely satisfying as it all came together
-- Deploying to Vercel at the start of the project and operating with a CI / CD mindset helped me integrate new features and ensure new bugs weren't introduced
-- At some point I will revisit this to make it more mobile-friendly, perhaps keeping reservations in cards instead of a table
